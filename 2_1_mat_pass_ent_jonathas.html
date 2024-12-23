@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            flex-direction: column; 
+        }
+
+        form {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px; 
+        }
+
+        input, button {
+            width: 100%; 
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button-container button {
+            width: 48%; 
+        }
+
+        /* Novo estilo para o botão "Voltar" */
+        .voltar-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #8b0d0d;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .voltar-button:hover {
+            background-color: #a13f3f;
+        }
+
+        .logo {
+            width: 400px;  
+            height: auto;
+            margin-bottom: 30px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="Logo-do-IFCE.png.jpeg" alt="Logo" class="logo">
+        
+        <form action="#" method="post">
+            <label for="matricula">Login:</label><br>
+            <input type="text" id="matricula" placeholder="Seu número de matrícula" required><br><br>
+
+            <label for="senha">Senha:</label><br>
+            <input type="password" id="senha" name="senha" placeholder="Ex: 555-08" maxlength="6" required><br><br>
+
+            <div class="button-container">
+                <button type="button" class="voltar-button" onclick="window.history.back()">Voltar</button>
+                <button type="submit">Seguir</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
