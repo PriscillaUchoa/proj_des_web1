@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Saída</title>
+    <style>
+        /* Centraliza a imagem */
+        .imagem-centralizada {
+            display: block;
+            margin: 0 auto;
+            max-width: 50%;
+            height: auto;
+        }
+
+        /* Centraliza o formulário logo abaixo da imagem */
+        .form-container {
+            display: flex;
+            flex-direction: column; /* Coloca os elementos em coluna */
+            align-items: center; /* Centraliza horizontalmente */
+            margin-top: 20px; /* Espaçamento entre a imagem e o formulário */
+        }
+
+        /* Estilo dos inputs */
+        label {
+            margin-top: 10px; /* Espaçamento entre o label e o input acima */
+        }
+
+        input {
+            margin-bottom: 15px; /* Espaçamento entre o input e o próximo elemento */
+            padding: 10px;
+            width: 80%; /* Ajuste a largura do input */
+            max-width: 300px; /* Define uma largura máxima para inputs */
+            border: 1px solid #ccc; /* Borda leve para os inputs */
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+
+        /* Estilo dos botões */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Espaçamento entre os botões */
+            margin-top: 20px; /* Espaçamento acima dos botões */
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #8b0d0d;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3f0606;
+        }
+    </style>
+</head>
+<body>
+    <img src="Logo-do-IFCE.png.jpeg" alt="logo do IFCE horizontal" class="imagem-centralizada">
+
+    <div class="form-container">
+        <label for="matricula">Número de Matrícula</label>
+        <input type="text" id="matricula" />
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" />
+    </div>
+
+    <div class="button-container">
+        <button onclick="voltar()">Voltar</button>
+        <button onclick="avancar()">Avançar</button>
+    </div>
+
+    <script>
+        function voltar() {
+            // Adicione o redirecionamento ou lógica para a página anterior
+            alert('Voltando à página anterior!');
+            // Exemplo: window.location.href = 'pagina-anterior.html';
+        }
+
+        function avancar() {
+            // Redirecionando para a próxima página
+            window.location.href = 'pag2priscilla.html';
+        }
+    </script>
+</body>
+</html>
