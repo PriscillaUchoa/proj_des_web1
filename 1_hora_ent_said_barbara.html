@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto IFCE</title>
+    <title>Registro de Frequência</title>
     <style>
-        /* Estilo básico do corpo */
+      
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -19,31 +19,34 @@
             height: 100vh;
         }
 
-        /* Centralizar a imagem e aumentar seu tamanho em 50% */
         .logo {
             width: 600px; 
             height: auto;
             border-radius: 15px;
-            margin-bottom: 45px; /* Aumentei o espaço abaixo da imagem */
+            margin-bottom: 5px;
         }
 
-        /* Estilo do botão - aumentando em 50% */
         button {
-            padding: 18px 30px; /* Aumentei o padding do botão */
-            margin: 15px; /* Aumentei o espaço entre os botões */
-            background-color: #4CAF50; /* Verde */
+            padding: 18px 30px; 
+            margin: 15px; 
+            background-color: #4CAF50; 
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 24px; /* Aumentei o tamanho da fonte */
+            font-size: 24px; 
         }
 
         button:hover {
             background-color: #45a049;
         }
-
         
+        .button-container {
+            display: flex;
+            gap: 20px; 
+            margin-top: 20px;
+        }
+
         .input-container {
             margin-top: 30px;
             text-align: center;
@@ -61,15 +64,22 @@
 </head>
 
 <body>
-
    
-    <img src="Logo-do-IFCE.png.jpeg" alt="LOGO IFCE" class="logo">
+    <img src="images\Sobral-02.png" alt="LOGO IFCE" class="logo">
 
-    
-    <div>
-        <button><label>Registrar hora de entrada</label></button>
-        <button><label>Registrar hora de saída</label></button>
+     <div class="button-container">
+        <button onclick="abrirFormularioEntrada()">Registrar hora de entrada</button>
+        <button onclick="abrirFormularioSaida()">Registrar hora de saída</button>
     </div>
+    <script>
+        function abrirFormularioEntrada() {
+            window.location.href = "2_1_mat_pass_ent_jonathas.html"; 
+        }
+
+        function abrirFormularioSaida() {
+            window.location.href = "2_2_mat_pass_saida_priscilla.html"; 
+        }
+    </script>
 
 </body>
 

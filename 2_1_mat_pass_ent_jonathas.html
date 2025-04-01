@@ -4,28 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <style>
+        /* Estilo básico do corpo */
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
             font-family: Arial, sans-serif;
-            text-align: center;
-            flex-direction: column; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4;
+            height: 100vh;
         }
 
         form {
+            font-family: Arial, sans-serif;
+            font-weight: 200;
             background-color: #f4f4f4;
-            padding: 20px;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 400px; 
         }
 
         input, button {
-            width: 100%; 
+            font-family: Arial, sans-serif;
+            width: 95%; 
             padding: 10px;
             margin: 10px 0;
             border-radius: 4px;
@@ -33,13 +39,16 @@
         }
 
         button {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
             background-color: #4CAF50;
             color: white;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: darkgreen;
         }
 
         .button-container {
@@ -51,18 +60,16 @@
             width: 48%; 
         }
 
-        /* Novo estilo para o botão "Voltar" */
         .voltar-button {
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             background-color: #8b0d0d;
             color: white;
-            font-size: 15px;
+            font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-
         .voltar-button:hover {
             background-color: #a13f3f;
         }
@@ -74,10 +81,12 @@
             border-radius: 30px;
         }
     </style>
+
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <div>
-        <img src="Logo-do-IFCE.png.jpeg" alt="Logo" class="logo">
+        <img src="images\Sobral_Prancheta 1.png" alt="Logo vertical" class="logo">
         
         <form action="#" method="post">
             <label for="matricula">Login:</label><br>
@@ -88,7 +97,7 @@
 
             <div class="button-container">
                 <button type="button" class="voltar-button" onclick="window.history.back()">Voltar</button>
-                <button type="submit">Seguir</button>
+                <button type="button" onclick="window.location.href='3_1_dados_entrada_jonathas.html'">Seguir</button>
             </div>
         </form>
     </div>

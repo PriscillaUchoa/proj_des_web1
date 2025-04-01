@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Entrada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <title>Saída</title>
     <style>
         
         body {
@@ -15,24 +16,25 @@
             align-items: center;
             justify-content: center; 
             height: 100vh;
-            background-color: #fff; 
+            background-color: #f4f4f4; 
         }
 
         .container {
-            width: 80%;
+            width:100%;
             max-width: 600px;  
             margin: 20px auto;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 8px;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
+            align-items: center;
+            justify-content: center;
         }
-
         
         .logo {
             width: 400px; 
-            height: auto;
-            margin-bottom: 30px;
+            height: fit-content;
+            margin-bottom: 0%;
             border-radius: 15px; 
             background-color: transparent; 
         }
@@ -47,24 +49,25 @@
         }
 
         .field input {
-            width: 100%;
+            width: 96%;
             padding: 8px;
             margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
 
-        
         .buttons button {
             padding: 10px 20px;
             margin: 5px;
             border: none;
             border-radius: 4px;
-            background-color: green; 
+            background-color: #4CAF50; 
             color: white;             
             cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
         }
-
         
         .buttons .voltar-button {
             background-color: #8b0000; 
@@ -78,7 +81,6 @@
         .buttons button:hover {
             background-color: darkgreen;
         }
-
         
         .datetime {
             position: fixed;
@@ -93,14 +95,10 @@
     </style>
 </head>
 <body>
-
     
-    <img src="Logo-do-IFCE.png.jpeg" alt="Logo" class="logo">
-
-    
+    <img src="images\Sobral_Prancheta 1.png" alt="Logo" class="logo">
+   
     <div class="container">
-        <h2>Formulário de Entrada</h2>
-
         <div class="field">
             <label for="nome">Nome Completo:</label>
             <input type="text" id="nome" name="nome" required>
@@ -117,16 +115,15 @@
         </div>
 
         <div class="field">
-            <label for="hora">Hora de Entrada:</label>
+            <label for="hora">Hora de Saída:</label>
             <input type="text" id="hora" name="hora" disabled>
         </div>
 
         <div class="buttons">
             <button type="button" class="voltar-button" onclick="voltar()">Voltar</button>
-            <button type="button" onclick="seguirEmFrente()">Seguir em Frente</button>
+            <button type="button" onclick="seguirEmFrente()">Registrar saída</button>
         </div>
     </div>
-
     
     <div id="datetime" class="datetime"></div>
 
@@ -140,7 +137,6 @@
             document.getElementById('hora').value = `${horas}:${minutos}:${segundos}`;
         }
 
-        
         function exibirData() {
             const data = new Date();
             const dia = String(data.getDate()).padStart(2, '0');
@@ -150,18 +146,20 @@
         }
 
         function voltar() {
-            alert("Você clicou em 'Voltar'.");
+            alert("Você clicou em 'Voltar' e não terá sua saída registrada.");
+            window.history.back(); // Retorna à página anterior
         }
 
         function seguirEmFrente() {
-            alert("Você clicou em 'Seguir em Frente'.");
+            alert("Saída registrada com sucesso!");
+            window.location.href = "0_bem_vind_liriane.html";
         }
-
        
         exibirHora();
         exibirData();
         setInterval(exibirHora, 1000); 
     </script>
 
+</script>
 </body>
 </html>
